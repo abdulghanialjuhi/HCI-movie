@@ -16,6 +16,8 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
 
+    console.log('nextApi: ', nextApi);
+    
       https(`${nextApi}/api/check`)
       .then((res) => {
         if (res.data.auth) {
