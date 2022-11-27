@@ -1,0 +1,173 @@
+@import './sass-config';
+
+.movie-containor {
+    @include flexCenter();
+    padding: 0 0rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+    min-height: 65vh;
+}
+
+.categories-container {
+    margin-top: 1rem;
+    @include flexCenter($justify-content: flex-start);
+    padding: 0rem 1rem;
+    width: 100%;
+
+    a {
+        @include flexCenter();
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border: #343a40 0.6px solid;
+        cursor: pointer;
+        width: 120px;
+        overflow: hidden;
+
+        &:hover {
+            background-color: #1b1b1b;
+          }
+
+   
+    }
+    .active {
+        color: black;
+        background-color: #f8f9fa;
+        border: 1px solid rgb(255, 255, 255);
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+    }
+}
+
+.pagination-container {
+    @include flexCenter();
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    ul {
+        @include flexCenter($justify-content: space-between);
+        width: 100%;
+        max-width: 600px;
+        padding: 0 1rem;
+
+        li {
+            text-align: center;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .active {
+            color: #666666;
+        }
+
+    }
+}
+
+
+.pannerContainer {
+    width: 100%;
+    display: flex;
+    max-height: 22rem;
+    overflow: hidden;
+    position: relative;
+
+    .left {
+        position: absolute;
+        top: 40%;
+        padding: 0 5px;
+    }
+
+    .right {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        padding: 0 5px;
+
+    }
+
+    .pannerInside {
+        position: relative;
+        max-height: 22rem;
+
+    .info {
+        position: absolute;
+        bottom: 15%;
+        padding: 0 10px;
+
+        span {
+            margin: 0 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    }
+
+    .panner {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+   
+    }
+ }
+
+.filterBar {
+    width: 100%;
+    height: 7rem;
+
+    .firstFilter {
+        width: 100%;
+        background-color: #0c0c0c;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .eachLink {
+            display: flex;
+            align-items: center;
+            color: #8d8d8d;
+
+            svg {
+                fill: red;
+                margin: 0 5px;
+            }
+
+            .active {
+                color: #fff;
+            }
+        }
+
+        
+    }
+
+    .secondFilter {
+        width: 100%;
+        background-color: #1f1f1f;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: black;
+
+        select {
+            background-color: transparent;
+            border-radius: 5px;
+            height: 2rem;
+            // width: 5rem;
+            padding: 0 6px;
+        }
+    }
+ }
+
+@media (max-width: 450px) { 
+    .categories-container {
+        a {
+            height: 2.5rem;
+            width: 33%;
+            font-size: 12px;
+        }
+    }
+}

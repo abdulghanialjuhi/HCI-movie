@@ -1,0 +1,209 @@
+@import './sass-config';
+
+.header {
+    @include flexCenter();
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0 1rem;
+}
+
+    .nav-container {
+        width: 100%;
+        max-width: 1190px;
+        height: 4rem;
+        @include flexCenter($justify-content: space-between);
+        transition: height 250ms ease;
+
+        &__title-container {
+        h2 {
+            span {
+                color: #0070f3;
+            }
+        }
+        }
+
+        .first-nav {
+            @include flexCenter($justify-content: space-around);
+            width: 45%;
+
+            .navigation {
+                @include flexCenter($justify-content: space-between);
+                width: 70%;
+
+                a {
+                    font-weight: 500;
+                    cursor: pointer;
+                    color: gray;
+
+                    &:hover {
+                        color: rgb(181, 181, 181);
+                    }
+                }
+
+                .active {
+                    color: #fff;
+                }
+            }
+        }
+
+        .righ-container {
+            @include flexCenter($justify-content: flex-end);
+            width: 40%;
+            padding: 0 20px;
+        }
+
+        .burger-icon-container {
+            display: none;
+        }
+
+        .tool-bar-container {
+            width: 50%;
+            padding: 5px;
+            border-radius: 5px;
+            @include flexCenter($justify-content: space-between);
+            
+            h5 {
+                letter-spacing: 1px;
+                font-weight: 500;
+            }
+        
+            .tool-control {
+                @include flexCenter($justify-content: space-between);
+                width: 60%;
+        
+                .visualize-button {
+                    color: $secondary-text-color;
+            
+                    &--active {
+                        color: $primary-text-color;
+
+                        background-color: #6ccca5;
+            
+                        &:hover {
+                            background-color: #5fc79d;
+                        }
+                    }
+                }
+
+                .clear-board-container {
+                    background-color: #20203d;
+
+                    &:hover {
+                        background-color: #202031;
+                    }
+                }
+            }
+        }
+
+   
+        
+        .moreContainer {
+            position: relative;
+
+            h3 {
+                color: gray;
+                font-weight: normal;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+            
+            .more {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                position: absolute;
+                width: 10rem;
+                height: 10rem;
+                background-color: rgb(50, 50, 50);
+                border: 1px gray solid;
+                border-radius: 4px;
+                z-index: 1;
+                margin-top: 10px;
+
+                span {
+                    margin-top: 7px;
+                    color: #e5e5e5;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: rgb(187, 187, 187);
+                    }
+                }
+
+                .moreMore {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    position: absolute;
+                    width: 10rem;
+                    height: 10rem;
+                    background-color: rgb(50, 50, 50);
+                    border: 1px gray solid;
+                    border-radius: 4px;
+                    z-index: 1;
+                    margin-top: 10px;
+                    left: 100%;
+                }
+            }
+        }
+
+
+        .listNav {
+            color:  gray;
+        }
+    }
+
+
+@media (max-width: 650px) {
+    .nav-container { 
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+
+        &--extend {
+            height: 190px;
+        }
+
+        .first-nav {
+            flex-direction: column;
+            width: 100%;
+
+            .navigation {
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 3.5rem;
+            }
+        }
+
+        .upper-container {
+            @include flexCenter($justify-content: space-between);
+            width: 100%;
+            min-height: 4rem;
+        }
+
+        .burger-icon-container {
+            display: flex;
+        }
+
+        .tool-bar-container {
+            min-height: 7rem;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .tool-control {
+                width: 80%;
+            }
+        } 
+
+        .righ-container {
+            @include flexCenter($justify-content: flex-start);
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+}
