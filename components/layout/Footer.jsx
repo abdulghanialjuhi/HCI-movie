@@ -8,15 +8,10 @@ export default function Footer() {
     <footer className={FooterStyle['footer-contaienr']}>
       <div className={FooterStyle['inner-footer-contaienr']}>
 
-            <h5> &copy; Movie DB 2022 </h5>
+          <h5> &copy; HBO 2022 </h5>
         <div className={FooterStyle['social-media-footer-container']}>
           <div>
-            <a href='https://twitter.com/abdulghani_18' target="_blank" rel="noreferrer" >
-                <FiTwitter strokeWidth={1} size={24} />
-            </a>
-          </div>
-          <div>
-            <a href= 'https://github.com/abdulghanialjuhi/next-movie-app' target="_blank" rel="noreferrer" >
+            <a href= 'https://github.com/abdulghanialjuhi/HCI-movie' target="_blank" rel="noreferrer" >
                 <FiGithub strokeWidth={1} size={24} />
             </a>
           </div>

@@ -19,7 +19,7 @@
     }
 
     .social-media-footer-container {
-      @include flexCenter($justify-content: space-between);
+      @include flexCenter($justify-content: end);
 
       & > div {
         display: flex;
