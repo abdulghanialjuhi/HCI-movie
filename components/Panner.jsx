@@ -36,7 +36,7 @@ export default function Panner({ data }) {
         arrows: false,
         infinite: true,
         easing: "ease",
-        indicators: (i) => <div className="indicator">{i + 1}</div>
+        // indicators: (i) => <div className="indicator">{i + 1}</div>
       };
 
       const back = () => {
